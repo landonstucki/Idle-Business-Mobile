@@ -22,7 +22,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.idlebusinessgame.R
 import com.example.idlebusinessgame.Player
-
 // Instantiate managers for shop and work logic.
 private val shop = ShopManager()
 private val work = WorkManager()
