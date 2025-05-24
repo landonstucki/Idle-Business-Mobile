@@ -20,8 +20,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.idlebusinessgame.R
-import com.example.idlebusinessgame.Player
 // Instantiate managers for shop and work logic.
 private val shop = ShopManager()
 private val work = WorkManager()
@@ -334,8 +332,8 @@ fun ShopScreen(
                 Column {
                     // 1) Create stand instance
                     val lemonadeStand = Stand(
-                        name   = "Lemonade Stand",
-                        cost   = 50f,
+                        name = "Lemonade Stand",
+                        cost = 50f,
                         income = 0.25f
                     )
                     // 2) Count how many are owned
@@ -343,9 +341,9 @@ fun ShopScreen(
                     // 3) Display icon and name row
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Image(
-                            painter            = painterResource(id = R.drawable.lemonadepic),
+                            painterResource(id = R.drawable.lemonadepic),
                             contentDescription = "Lemonade",
-                            modifier           = Modifier.size(48.dp)
+                            modifier= Modifier.size(48.dp)
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(text = "Lemonade Stand - \$${lemonadeStand.cost}", fontSize = 18.sp)
@@ -354,16 +352,16 @@ fun ShopScreen(
                     // 4) Show owned count, income rate, and Buy button
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        modifier          = Modifier.fillMaxWidth()
+                        modifier = Modifier.fillMaxWidth()
                     ) {
                         Text(
-                            text     = "Owned x$ownedLemonadeCount | Income: \$${lemonadeStand.income}/ea",
-                            color    = Color.Gray,
+                            text= "Owned x$ownedLemonadeCount | Income: \$${lemonadeStand.income}/ea",
+                            color= Color.Gray,
                             fontSize = 14.sp,
                             modifier = Modifier.weight(1f)
                         )
                         Button(
-                            onClick  = { shop.purchaseStand(player, lemonadeStand) },
+                            onClick= { shop.purchaseStand(player, lemonadeStand) },
                             modifier = Modifier.height(36.dp)
                         ) {
                             Text("Buy", fontSize = 14.sp)
@@ -373,17 +371,17 @@ fun ShopScreen(
 
                 // Newspaper Stand purchase section.
                 val newspaperStand = Stand(
-                    name   = "Newspaper Stand",
-                    cost   = 300f,
+                    name = "Newspaper Stand",
+                    cost = 300f,
                     income = 2.00f
                 )
                 val ownedNewspaperCount2 = player.ownedStands.count { it.name == "Newspaper Stand" }
                 Column {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Image(
-                            painter            = painterResource(id = R.drawable.newspaperpic),
+                            painter = painterResource(id = R.drawable.newspaperpic),
                             contentDescription = "Newspaper",
-                            modifier           = Modifier.size(48.dp)
+                            modifier= Modifier.size(48.dp)
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(text = "Newspaper Stand - \$${newspaperStand.cost}", fontSize = 18.sp)
@@ -391,16 +389,16 @@ fun ShopScreen(
                     Spacer(modifier = Modifier.height(4.dp))
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        modifier          = Modifier.fillMaxWidth()
+                        modifier= Modifier.fillMaxWidth()
                     ) {
                         Text(
-                            text     = "Owned x$ownedNewspaperCount2 | Income: \$${newspaperStand.income}/ea",
-                            color    = Color.Gray,
+                            text= "Owned x$ownedNewspaperCount2 | Income: \$${newspaperStand.income}/ea",
+                            color= Color.Gray,
                             fontSize = 14.sp,
                             modifier = Modifier.weight(1f)
                         )
                         Button(
-                            onClick  = { shop.purchaseStand(player, newspaperStand) },
+                            onClick= { shop.purchaseStand(player, newspaperStand) },
                             modifier = Modifier.height(36.dp)
                         ) {
                             Text("Buy", fontSize = 14.sp)
@@ -410,17 +408,17 @@ fun ShopScreen(
 
                 // Hot Dog Stand purchase section.
                 val hotDogStand = Stand(
-                    name   = "Hot Dog Stand",
-                    cost   = 750f,
+                    name= "Hot Dog Stand",
+                    cost= 750f,
                     income = 5.00f
                 )
                 val ownedHotDogCount2 = player.ownedStands.count { it.name == "Hot Dog Stand" }
                 Column {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Image(
-                            painter            = painterResource(id = R.drawable.hotdogpic),
+                            painter= painterResource(id = R.drawable.hotdogpic),
                             contentDescription = "Hot Dog",
-                            modifier           = Modifier.size(48.dp)
+                            modifier= Modifier.size(48.dp)
                         )
                         Spacer(modifier = Modifier.width(8.dp))
                         Text(text = "Hot Dog Stand - \$${hotDogStand.cost}", fontSize = 18.sp)
@@ -428,16 +426,16 @@ fun ShopScreen(
                     Spacer(modifier = Modifier.height(4.dp))
                     Row(
                         verticalAlignment = Alignment.CenterVertically,
-                        modifier          = Modifier.fillMaxWidth()
+                        modifier= Modifier.fillMaxWidth()
                     ) {
                         Text(
-                            text     = "Owned x$ownedHotDogCount2 | Income: \$${hotDogStand.income}/ea",
-                            color    = Color.Gray,
+                            text= "Owned x$ownedHotDogCount2 | Income: \$${hotDogStand.income}/ea",
+                            color= Color.Gray,
                             fontSize = 14.sp,
                             modifier = Modifier.weight(1f)
                         )
                         Button(
-                            onClick  = { shop.purchaseStand(player, hotDogStand) },
+                            onClick= { shop.purchaseStand(player, hotDogStand) },
                             modifier = Modifier.height(36.dp)
                         ) {
                             Text("Buy", fontSize = 14.sp)

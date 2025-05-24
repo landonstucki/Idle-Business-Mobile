@@ -1,30 +1,46 @@
 # Overview
 
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+This is version 2.0 of my Idle Business Game that I have created this time using Android Studio. The first version of this game was a console created application in Kotlin, this version is created in Kotlin as well but with the help of Android studio.
+Created for sole entertainment purposes, where a player starts out with virtual cash, buys businesses, works them and makes money in this cycle.
 
-{Provide a description of your app.  Describe how to use the app.}
-
-{Describe your purpose for creating this app.}
-
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the app running and a walkthrough of the code.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/hNTc2ltbzGY)
 
 # Development Environment
 
-{Describe the tools that you used to develop the app}
+- Github VCS
+- Github Desktop (GUI for VCS)
+- Android Studio Development Kit
+- Android Studio Developer Software (Programming for Android Devices)
+- Chat GPT+ Debugging/Professional Commenting
 
-{Describe the programming language that you used and any libraries.}
+Libraries and list of importsn
+(MAIN LIBRARY JETPACK COMPOSE):
+Import Jetpack Compose and UI toolkit dependencies.
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [Android Studio WebPage Documentation](https://developer.android.com/studio/intro)
+* [Chat GPT+](http://chatgpt.com)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Saving Features
+* Ranks/More Stands
+* Sounds and Animations
